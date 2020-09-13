@@ -20,7 +20,7 @@ class WeatherForecaste{
          temperature.add(Filter(line));
       }
 
-          temperature.forEach((n) ->ps.printf("    %.2f                         %.2f\n",n,convertionToCelsuis(n))); 
+          temperature.forEach((n) ->ps.printf("    %.2f                         %.2f\n",n,convertionToCelsius(n))); 
       
 
             sc.close(); // closing of the Scanner class
@@ -55,7 +55,7 @@ class WeatherForecaste{
      return Double.parseDouble(result) ;
    }
    //  the function below helps convert the temperature from fahrenheit to celsius by using the formuler T(°C) = (T(°F) - 32) × 5/9 
-  public static Double convertionToCelsuis(Double temperature){
+  public static Double convertionToCelsius(Double temperature){
     
     return (temperature - 32) * 5/9;
 
