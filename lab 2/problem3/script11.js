@@ -1,11 +1,13 @@
-const app = document.getElementById('main')
+const app = document.getElementById('main') // access to the html div which has the id main
 
 
+// Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest()     
 
-var request = new XMLHttpRequest()
+// the line below helps opening a new connection, using the GET request on the URL endpoint
 request.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=fLZPdkHJpu4sA6Xs6c3tLJcJax9hQ1s3Lx7QiWjp', true)
-request.onload = function () {
-  // start accessing JSON data here
+
+request.onload = function () {        // start accessing JSON data here
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
  
@@ -39,4 +41,4 @@ request.onload = function () {
   }
 }
 
-request.send()
+request.send() // sending of the request
