@@ -16,21 +16,21 @@ class LISTARTIST {
     Scanner sc;
     PrintStream ps;
     try {
-      final HashMap<String, ArrayList<String>> storage = new HashMap<String, ArrayList<String>>(); // store the artist
-                                                                                                   // as the key and his
+      final HashMap<String, ArrayList<String>> storage = new HashMap<String, ArrayList<String>>(); // store the artist name as the key
+                                                                                                   // and the list of his streams as the value
 
       sc = new Scanner(new File("input.csv"));
       ps = new PrintStream("output.txt");
       ps.println("\n                       Track Name                                 Total Number Of Streams  \n");
       while (sc.hasNextLine()) {
 
-        final String[] info = Filter(sc.nextLine()); // info[0] contains the streams name and info[1] contains the
+        final String[] info = Filter(sc.nextLine()); // info[0] contains the streams and info[1] contains the
                                                      // artist name
 
         if (storage.containsKey(info[1])) {
           storage.get(info[1]).add(info[0]); // add a son of an existant artist
         } else {
-          final ArrayList<String> ListOfSons = new ArrayList<String>(); // the list of the artist's sons
+          final ArrayList<String> ListOfSons = new ArrayList<String>(); // the list of the artist's sons streams
           ListOfSons.add(info[0]);
           storage.put(info[1], ListOfSons);
         }
