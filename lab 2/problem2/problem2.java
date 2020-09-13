@@ -14,7 +14,7 @@ class WeatherForecaste{
 
       sc = new Scanner(new File("forecast_data.csv"));
       ps = new PrintStream("output2.txt");
-      ps.println("\nTemperature ( °F)             Temperature(°C)  \n"); // 
+      ps.println("\nTemperature ( °F)             Temperature(°C)  \n"); 
       while (sc.hasNextLine()) {
          String line = sc.nextLine();
          temperature.add(Filter(line));
@@ -33,7 +33,7 @@ class WeatherForecaste{
     }
   
 
-    // the function below helps to get te temperature  and return it as a double
+    // the function below helps to get the temperature  and return it as a double
     public static  Double Filter(String line){
 
       ArrayList<Integer> IndiceOfComma = new ArrayList<Integer>();
@@ -54,7 +54,7 @@ class WeatherForecaste{
      
      return Double.parseDouble(result) ;
    }
-   // T(°C) = (T(°F) - 32) × 5/9
+   //  the function below helps convert the temperature from fahrenheit to celsius by using the formuler T(°C) = (T(°F) - 32) × 5/9 
   public static Double convertionToCelsuis(Double temperature){
     
     return (temperature - 32) * 5/9;
