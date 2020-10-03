@@ -1,0 +1,14 @@
+To be able to implement the bubblesort to sort an array of integer in an imperative language( C++ for this lab), 
+the user will need :
+
+- assignment of integer
+- for loops
+- if condition
+- boolean assignments
+- input and output
+- creating and accessing arrays' contains
+- calling procedures
+
+the user may also need some procedures ( if he decides to do a procedural abstraction of the code)
+
+- The bubblesort, display and swap procedures (by using pointers "*" and address accessor "&")
